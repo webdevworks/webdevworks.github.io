@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import NavbarCom from "./components/NavbarCom";
 import FooterCom from "./components/FooterCom";
 import Home from "./pages/Home";
@@ -10,7 +10,8 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <div className="App bg-slate-100">
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
+      <HashRouter>
         <NavbarCom />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,7 +20,8 @@ function App() {
           <Route path="/detail/:dataCategory" element={<Detail />} />
         </Routes>
         <FooterCom />
-      </BrowserRouter>
+      </HashRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
